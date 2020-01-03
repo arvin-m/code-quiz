@@ -24,39 +24,35 @@
       Java Script Quiz
     </a>
   </nav>
-  <!-- the quiz container -->
-<div class="container" id="quiz">
+  <!-- wrapper container -->
+  <div class="container">
+      <!-- Start Btn to start the quiz -->
     <button type="button" class="btn btn-success" id="start">Start The Quiz</button>
 
-        <div class="container-sm" id="question">
-            q
-
-        </div>
-
-            <div onclick="checkAnswer('A')" class="container-sm choice" id="A">
-                A
-            </div>
-
-            <div onclick="checkAnswer('B')" class="container-sm choice" id="B">
-                B
-            </div>
-
-            <div onclick="checkAnswer('C')" class="container-sm choice" id="C">
-                C
-            </div>
+    <!-- the quiz container -->
+    <div class="container-sm" id="quiz" //style="display: none" >
                 
-            <div onclick="checkAnswer('D')" class="container-sm choice" id="D">
-                D
-            </div>
-            
+        <div class="col-sm-12" id="question"></div>
+                           
+        <div class=" container-sm" id="choices">
+            <div class="col-sm-12 choice" id="A" onclick="checkAnswer('A')"></div>
+            <div class="col-sm-12 choice" id="B" onclick="checkAnswer('B')"></div>
+            <div class="col-sm-12 choice" id="C" onclick="checkAnswer('C')"></div>
+        </div>
+        
+        
+        <div class="container-sm" id="timer">
+            <div class="col-sm-3" id="counter"></div>
+        </div>          
+
+             
+               
+    </div>
+
+  <div class="container-sm" id="scoreContainer" //style="display: none" ></div>
 
 
-
-</div>
-
-<div class="modal-content" id="scoreContainer">
-
-
+           
 </div>
 
 <body>
