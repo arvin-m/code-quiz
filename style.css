@@ -1,0 +1,45 @@
+.navbar{
+    /* background-color: tomato; */
+};
+
+#quiz{
+    display: none;
+    height: 100%;
+}
+
+#start{
+
+}
+
+#scoreContainer{
+    display:none;
+}
+
+#question{
+    background-color: blueviolet;
+
+}
+
+.choice{
+    background-color: green;
+
+}
+
+#A{
+    
+
+}
+
+#B{
+
+}
+
+#C{
+
+}
+
+#D{
+
+}
+
+
