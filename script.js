@@ -82,7 +82,7 @@ var incorrect = 0;
 // create a function to render a question
 function renderQuestion(){
     var q = questions[runningQuestion];
-    question.innerHTML ="<P>"+q.question+"</p>";
+    question.textContent =q.question;
     choiceA.textContent = q.choiceA;
     choiceB.textContent = q.choiceB;
     choiceC.textContent = q.choiceC;
