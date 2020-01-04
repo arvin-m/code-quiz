@@ -113,10 +113,10 @@ function renderCounter(){
     if(count <= questionTime){
         counter.textContent = "Timer: "+count;
         count++;
-        localStorage.setItem("counter",count);
+        // localStorage.setItem("counter",count);
 
         userScore.textContent ="Your Score: "+score;
-        localStorage.setItem("score",score);
+        // localStorage.setItem("score",score);
 
     }
     else{
@@ -140,13 +140,16 @@ function renderCounter(){
 
 // creatae a function to check the answer 
 function checkAnswer(answer){
+
     if (answer == questions[runningQuestion].correct){
         score++;
         userScore.innerHTML ="Your Score: "+score;
-        localStorage.setItem("score",score);
+        // localStorage.setItem("score",score);
 
     }
-    else{ incorrect++ };
+    else{
+         incorrect++ ;
+         }
     // if we want to reset the time after each question we can add here count = 0 ; 
 
     if(runningQuestion<lastQuestion){
@@ -161,15 +164,7 @@ function checkAnswer(answer){
      
 };
 
-// answer is correct
-function answerIsCorrect(){
-    document.getElementById(runningQuestion).style.backgroundColor = "#0f0";
-}
 
-// answer is Wrong
-function answerIsWrong(){
-    document.querySelectorAll(runningQuestion).style.backgroundColor = "#f00";
-};
 
 //create a function to show the score at the end
 function scoreRender(){
@@ -182,20 +177,29 @@ function scoreRender(){
     resultIncorect.innerHTML ="<P>"+"Your Incorect Answer : "+ incorrect +"</p>";
     resultAnswer.innerHTML ="<P>"+"Your Corect Answer : "+ score +"</p>";
 
+    localStorage.setItem("scoreP",scorePercent);
+    console.log(scorePercent+"%");
+
+   
+     
+    
+
    
 
 };
-  
-// submit.addEventListener("click", function(event) {
-//     event.preventDefault();
+
+// submitBtn
+// submit.addEventListener("click",saveToLocal);
+// var name = userName.textContent
+
+
+// function saveToLocal(){
+//     localStorage.setItem("name",name);
+//     localStorage.setItem("scoreP",scorePercent);
     
-// var user = userName.value.trim();
-// localStorage.setItem("name", user);
-// //  user = localStorage.getItem("name");
 
-// localStorage.setItem("name", JSON.stringify(user));
-// new String(user);
 
-// });
-// console.log(localStorage("name"));
+
+// };
+  
 
