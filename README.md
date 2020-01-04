@@ -4,9 +4,9 @@ create a multiple choice quiz using JavaScript, in this quiz, the user will answ
 
 ## Sketch application:
 
-![sketch-start](img\sketch-start.png),
-![sketch-question](img\sketch-questions.png),
-![sketch-result](img\sketch-result.png)
+![sketch-start](img/sketch-start.png),
+![sketch-question](img/sketch-questions.png),
+![sketch-result](img/sketch-result.png)
 
 
 in this application we are using a boostrap CSS link and also boostrap Javascript link.
