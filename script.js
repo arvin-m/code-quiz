@@ -23,7 +23,7 @@ var questions = [
     choiceB:"<script href=xxx.js>",
     choiceC:"<script path=xxx.js>",
     choiceD:"<script link=xxx.js>",
-    correct:"B"
+    correct:"A"
 },
 {
     question:"How we can declare a (function) in Javascript ?",
