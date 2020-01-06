@@ -60,12 +60,21 @@
     <div class="col-sm-5" id="result"></div>
     <div class="col-sm-5" id="resultIncorect"></div>
     <div class="col-sm-5" id="corectAnswer"></div>
-    <input type="text" name="name" id="userName" placeholder="Your Name" />
-    <button id="submit">Submit</button>
-        </form>
 
-      
+    <form>
+      <div class="form-group">
+        <label for="Your Name">Your Name :</label>
+        <input type="text" class="form-control" id="userName">
+        <button id="submit" type="button" onclick="submitBtn()" class="btn btn-secondary">Submit</button>
+      </div>
+      <div id="returnLastUser">
+        
+  
+      </div>
+      </form>
+         
   </div>
+  
 
 
            

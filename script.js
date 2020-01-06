@@ -12,8 +12,9 @@ var resultContainer = document.getElementById("resultBox");
 var result = document.getElementById("result");
 var resultIncorect = document.getElementById("resultIncorect");
 var resultAnswer = document.getElementById("corectAnswer");
-var userName = document.querySelector("#userName");
-var submit = document.getElementById("#submit");
+var userName = document.getElementById("#userName");
+// var submitBtn = document.getElementById("#submit");
+
 
 // create questions inside the array
 var questions = [
@@ -169,37 +170,31 @@ function checkAnswer(answer){
 //create a function to show the score at the end
 function scoreRender(){
     quiz.style.display ="none";
+    
 
     resultContainer.style.display="block";
+    
+   
     // calculate the user answer percent
     var scorePercent = Math.round(100 * score/questions.length);
     result.innerHTML ="<P>"+"Your score percent : "+ scorePercent +"% " +"</p>";
     resultIncorect.innerHTML ="<P>"+"Your Incorect Answer : "+ incorrect +"</p>";
     resultAnswer.innerHTML ="<P>"+"Your Corect Answer : "+ score +"</p>";
 
+    // save the score percent in local storage
     localStorage.setItem("scoreP",scorePercent);
-    console.log(scorePercent+"%");
-
-   
-     
+      
     
-
-   
 
 };
 
-// submitBtn
-// submit.addEventListener("click",saveToLocal);
-// var name = userName.textContent
 
+// function submitBtn(){
 
-// function saveToLocal(){
-//     localStorage.setItem("name",name);
-//     localStorage.setItem("scoreP",scorePercent);
+//      var name = userName.textContent
+//     localStorage.setItem("userName",name);
+    
     
 
-
-
 // };
-  
 
