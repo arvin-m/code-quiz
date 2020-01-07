@@ -147,7 +147,7 @@ function rightOrWrong (bool) {
     check.textContent = text;
     setTimeout(function() {
         check.textContent = "";
-    }, 3000)
+    }, 2000)
 };
 
 // creatae a function to check the answer 
