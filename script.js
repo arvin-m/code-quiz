@@ -13,7 +13,9 @@ var result = document.getElementById("result");
 var resultIncorect = document.getElementById("resultIncorect");
 var resultAnswer = document.getElementById("corectAnswer");
 var userName = document.getElementById("#userName");
-// var submitBtn = document.getElementById("#submit");
+var submitBtn = document.getElementById("#submit");
+
+
 
 
 // create questions inside the array
@@ -73,8 +75,8 @@ var questions = [
 // create some variable
 var lastQuestion = questions.length -1; //becuse last index is [6] and .length gave us number 7 ,so .length-1 =6
 var runningQuestion = 0;
-var count = 0;
-var questionTime = 70; //70 seconds for all questions, each 10 s
+var count = 60; //60 seconds for all questions, each 10 s
+var questionTime = 0; 
 var TIMER;
 var score = 0;
 var incorrect = 0;
@@ -111,9 +113,9 @@ TIMER = setInterval(renderCounter,1000); //100 ms == 1sec
 // create a  function to render a Time
 
 function renderCounter(){
-    if(count <= questionTime){
+    if(count >= questionTime){
         counter.textContent = "Timer: "+count;
-        count++;
+        count--;
         // localStorage.setItem("counter",count);
 
         userScore.textContent ="Your Score: "+score;
@@ -144,12 +146,14 @@ function checkAnswer(answer){
 
     if (answer == questions[runningQuestion].correct){
         score++;
+        
         userScore.innerHTML ="Your Score: "+score;
         // localStorage.setItem("score",score);
 
     }
     else{
          incorrect++ ;
+         
          }
     // if we want to reset the time after each question we can add here count = 0 ; 
 
@@ -188,13 +192,14 @@ function scoreRender(){
 
 };
 
+// submitBtn.addEventListener("click",submit);
 
-// function submitBtn(){
-
-//      var name = userName.textContent
-//     localStorage.setItem("userName",name);
-    
-    
+// function submit(){
+//     var name = userName.textContent
+//     console.log("usename :"+name);
+//    localStorage.setItem("userName",name);
 
 // };
+
+
 
