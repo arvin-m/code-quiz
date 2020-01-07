@@ -13,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <!-- link the JS file -->
-    <script src="script.js" defer></script>
+    <script defer src="script.js"></script>
 
     <!-- link the css file -->
     <link rel="stylesheet" href="style.css">
@@ -40,6 +40,7 @@
             <div class="col-sm-5 rounded choice" id="B" onclick="checkAnswer('B')"></div>
             <div class="col-sm-5 rounded choice" id="C" onclick="checkAnswer('C')"></div>
             <div class="col-sm-5 rounded choice" id="D" onclick="checkAnswer('D')"></div>
+            <div id="check"></div>
             
         </div>
         
@@ -67,7 +68,7 @@
       <div class="form-group">
         <label for="Your Name">Your Name :</label>
         <input type="text" class="form-control" id="userName">
-        <button id="submit" type="button" onclick="submit()" class="btn btn-secondary">Submit</button>
+        <button id="submit" type="button"  class="btn btn-secondary">Submit</button>
       </div>
       <div id="returnLastUser">
         

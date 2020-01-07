@@ -12,8 +12,9 @@ var resultContainer = document.getElementById("resultBox");
 var result = document.getElementById("result");
 var resultIncorect = document.getElementById("resultIncorect");
 var resultAnswer = document.getElementById("corectAnswer");
-var userName = document.getElementById("#userName");
-var submitBtn = document.getElementById("#submit");
+var userName = document.getElementById("userName");
+var submitBtn = document.getElementById("submit");
+var check = document.getElementById("check");
 
 
 
@@ -141,11 +142,21 @@ function renderCounter(){
 
 };
 
+function rightOrWrong (bool) {
+    var text = bool ? "Correct!" : "Wrong!";
+    check.textContent = text;
+    setTimeout(function() {
+        check.textContent = "";
+    }, 3000)
+};
+
 // creatae a function to check the answer 
 function checkAnswer(answer){
 
     if (answer == questions[runningQuestion].correct){
         score++;
+        rightOrWrong(true);
+
         
         userScore.innerHTML ="Your Score: "+score;
         // localStorage.setItem("score",score);
@@ -153,13 +164,14 @@ function checkAnswer(answer){
     }
     else{
          incorrect++ ;
-         
+         rightOrWrong(false);
          }
     // if we want to reset the time after each question we can add here count = 0 ; 
 
     if(runningQuestion<lastQuestion){
         runningQuestion++;
         renderQuestion();
+
     }
     else{
         // end the quiz
@@ -192,14 +204,15 @@ function scoreRender(){
 
 };
 
-// submitBtn.addEventListener("click",submit);
+submitBtn.addEventListener("click",submit);
 
-// function submit(){
-//     var name = userName.textContent
-//     console.log("usename :"+name);
-//    localStorage.setItem("userName",name);
+function submit(){
+    console.log('inside submit function')
+    var name = userName.value;
+    console.log("usename :"+name);
+   localStorage.setItem("userName",name);
 
-// };
+};
 
 
 
