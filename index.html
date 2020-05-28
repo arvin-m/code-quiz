@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Code Quiz</title>
-    <!-- link  boostrap css  -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <!-- link boostrap JS  -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <!-- link the JS file -->
-    <script defer src="script.js"></script>
 
-    <!-- link the css file -->
-    <link rel="stylesheet" href="style.css">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Code Quiz</title>
+  <!-- link  boostrap css  -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- link boostrap JS  -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <!-- link the JS file -->
+  <script defer src="script.js"></script>
+
+  <!-- link the css file -->
+  <link rel="stylesheet" href="style.css">
 </head>
-<!-- using boostrap nav bar -->
-<nav class="navbar navbar-light">
+
+<body>
+  <!-- using boostrap nav bar -->
+  <nav class="navbar navbar-light">
     <a class="navbar-brand">
       <img src="img/logo.png" width="100" height="50" class="d-inline-block align-top" alt="">
       JavaScript Quiz
@@ -27,63 +37,42 @@
   </nav>
   <!-- wrapper container -->
   <div class="container">
-      <!-- Start Btn to start the quiz -->
+    <!-- Start Btn to start the quiz -->
     <button type="button" class="btn btn-warning" id="start">Start The Quiz</button>
-
     <!-- the quiz container -->
-    <div class="container-sm shadow p-3 mb-5  rounded " id="quiz" >
-                
-        <div class="col-sm-5 rounded" id="question"></div>
-                           
-        <div class=" container-sm rounded " id="choices">
-            <div class="col-sm-5 rounded choice" id="A" onclick="checkAnswer('A')"></div>
-            <div class="col-sm-5 rounded choice" id="B" onclick="checkAnswer('B')"></div>
-            <div class="col-sm-5 rounded choice" id="C" onclick="checkAnswer('C')"></div>
-            <div class="col-sm-5 rounded choice" id="D" onclick="checkAnswer('D')"></div>
-            <div id="check"></div>
-            
-        </div>
-        
-        
-        
-        <div class="container-sm" id="timer">
-            <div class="col-sm-3" id="counter"></div>
-        </div>          
-
-        <div class="container-sm">
-          <div class="col-sm-3" id="score"></div>
-      </div>  
-
-             
-               
+    <div class="container-sm shadow p-3 mb-5  rounded " id="quiz">
+      <div class="col-sm-5 rounded" id="question"></div>
+      <div class=" container-sm rounded " id="choices">
+        <div class="col-sm-5 rounded choice" id="A" onclick="checkAnswer('A')"></div>
+        <div class="col-sm-5 rounded choice" id="B" onclick="checkAnswer('B')"></div>
+        <div class="col-sm-5 rounded choice" id="C" onclick="checkAnswer('C')"></div>
+        <div class="col-sm-5 rounded choice" id="D" onclick="checkAnswer('D')"></div>
+        <div id="check"></div>
+      </div>
+      <div class="container-sm" id="timer">
+        <div class="col-sm-3" id="counter"></div>
+      </div>
+      <div class="container-sm">
+        <div class="col-sm-3" id="score"></div>
+      </div>
     </div>
-
-  <div class="container-sm col-sm-6" id="resultBox" //style="display: none" >
-    
-    <div class="col-sm-5" id="result"></div>
-    <div class="col-sm-5" id="resultIncorect"></div>
-    <div class="col-sm-5" id="corectAnswer"></div>
-
-    <form>
-      <div class="form-group">
-        <label for="Your Name">Your Name :</label>
-        <input type="text" class="form-control" id="userName">
-        <button id="submit" type="button"  class="btn btn-secondary">Submit</button>
-      </div>
-      <div id="returnLastUser">
-        
-  
-      </div>
+    <div class="container-sm col-sm-6" id="resultBox">
+      <div class="col-sm-5" id="result"></div>
+      <div class="col-sm-5" id="resultIncorect"></div>
+      <div class="col-sm-5" id="corectAnswer"></div>
+      <form>
+        <div class="form-group">
+          <label for="Your Name">Your Name :</label>
+          <input type="text" class="form-control" id="userName">
+          <button id="submit" type="button" class="btn btn-secondary">Submit</button>
+        </div>
+        <div id="returnLastUser">
+        </div>
       </form>
-         
+    </div>
   </div>
-  
 
+  <body>
+  </body>
 
-           
-</div>
-
-<body>
-    
-</body>
 </html>
